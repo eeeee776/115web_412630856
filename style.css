@@ -1,0 +1,140 @@
+/* 讓寬度計算更容易理解 */
+* {
+  box-sizing: border-box;
+}
+
+/* 3 & 4. 設定整個網頁的背景色、基本文字與字型 */
+body {
+  margin: 0;
+  color: #243447;
+  background-color: #f4f7fb;
+  font-family: Arial, "Microsoft JhengHei", sans-serif;
+  line-height: 1.6;
+}
+
+/* 3. 設定頁首與頁尾的背景色 */
+header,
+footer {
+  padding: 24px;
+  color: white;
+  text-align: center;
+  background-color: #234e70;
+}
+
+/* 6. 使用 Flexbox 排列導覽列，並加上底色讓白字清楚顯示 */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: #1b3d58;
+  padding: 12px;
+  color: white;
+}
+
+/* 4. 設定導覽列連結與一般連結的樣式 */
+a {
+  color: #1769aa;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* 3. 設定主要內容區域與區塊背景色 */
+main {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+section,
+main > div {
+  margin-bottom: 24px;
+  padding: 24px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* 4. 設定標題與段落的樣式 */
+h1 {
+  margin-top: 0;
+}
+
+h2 {
+  color: #234e70;
+}
+
+p {
+  line-height: 1.8;
+}
+
+/* 5. 設定圖片寬度與圓角 */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* 清單間距 */
+li {
+  margin-bottom: 8px;
+}
+
+/* 5. 設定表格框線與外觀 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+th,
+td {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  text-align: left;
+}
+
+th {
+  background-color: #dbeafe;
+}
+
+/* 手機版面 RWD */
+@media (max-width: 600px) {
+  header,
+  footer {
+    padding: 16px;
+  }
+
+  main {
+    width: 100%;
+    padding: 16px;
+  }
+
+  section,
+  main > div {
+    padding: 16px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+}
